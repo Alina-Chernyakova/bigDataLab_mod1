@@ -19,6 +19,5 @@ def get_sorted_report(branches):
 
 new_branches=get_sorted_report(branches)
 print("Топ филиалов:")
-print("Топ филиалов:")
 for index, branch in enumerate(new_branches, start=1):
     print(f"{index}. {branch['city']}: {branch['revenue']}")
