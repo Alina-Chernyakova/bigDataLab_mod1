@@ -3,7 +3,10 @@ from product import Product
 class WeighableProduct(Product):
     def __init__(self, name, price, weight):
         super().__init__(name, price)
-        self.weight = weight
+        if weight > 0:
+            self.weight=weight
+        else:
+            raise ValueError("Вес должен быть больше 0")
     
     def calculate_cost(self):
         return self.get_price() * self.weight
